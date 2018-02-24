@@ -37,6 +37,14 @@ public class UserService {
 		userRepository.delete(id);
 	}
 	
+	public User editUser(int id) {
+		return userRepository.findOne(id);
+	}
 	
+	public User findByUsernameAndPassword(String username, String password) {
+		return userRepository.findByUsernameAndPassword(username, password);
+	}
+	
+	}
 
-}
+	
